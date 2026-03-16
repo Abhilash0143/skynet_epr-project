@@ -17,13 +17,13 @@ function App() {
   switch (user.role) {
 
     case "admin":
-      return <AdminDashboard user={user} />
+      return <AdminDashboard user={user} setUser={setUser} />
 
     case "instructor":
-      return <InstructorDashboard user={user} />
+      return <InstructorDashboard user={user} setUser={setUser} />
 
     case "student":
-      return <StudentDashboard user={user} />
+      return <StudentDashboard user={user} setUser={setUser} />
 
     default:
       return null

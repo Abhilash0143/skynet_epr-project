@@ -10,7 +10,7 @@ type Props = {
   user: User
 }
 
-export default function AdminDashboard({ user }: Props) {
+export default function AdminDashboard({ user, setUser }: any) {
 
   const [selected, setSelected] = useState<any>(null)
 
@@ -22,7 +22,7 @@ export default function AdminDashboard({ user }: Props) {
 
       <div className="flex-1 flex flex-col">
 
-        <Topbar />
+        <Topbar setUser={setUser} user={user} />
 
         <div className="flex flex-1 overflow-hidden">
 

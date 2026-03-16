@@ -1,34 +1,46 @@
 import type { User } from "../types/User"
 import PersonDetails from "../components/PersonDetails"
+import Topbar from "../components/Topbar"
+import Sidebar from "../components/Sidebar"
 
 type Props = {
   user: User
 }
 
-function StudentDashboard({ user }: Props) {
+function StudentDashboard({ user, setUser }: any) {
 
-  return (
+return (
 
-    <div className="flex h-screen">
+<div className="flex h-screen">
 
-      <div className="w-64 bg-gray-900 text-white p-6">
-        Student Panel
-      </div>
+  {/* SIDEBAR */}
+  <Sidebar />
 
-      <div className="flex-1 p-6">
+  {/* RIGHT SIDE */}
+  <div className="flex flex-col flex-1">
 
-        <h1 className="text-2xl font-bold mb-4">
-          My Profile
-        </h1>
+    {/* TOPBAR */}
+    <Topbar setUser={setUser} user={user} />
 
-        <PersonDetails person={user}
-        user={user} />
+    {/* CONTENT */}
+    <div className="flex-1 p-6 overflow-y-auto">
 
-      </div>
+      <h1 className="text-2xl font-bold mb-4">
+        My Profile
+      </h1>
+
+      <PersonDetails
+        person={user}
+        user={user}
+      />
 
     </div>
 
-  )
+  </div>
+
+</div>
+
+)
 }
 
 export default StudentDashboard

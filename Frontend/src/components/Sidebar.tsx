@@ -5,7 +5,7 @@ return(
 <div className="w-60 bg-gray-900 text-white flex flex-col p-4 h-full">
 
 <h2 className="text-xl font-semibold mb-6">
-ERP Admin
+Skynet Aeronautics
 </h2>
 
 <div className="space-y-3">
