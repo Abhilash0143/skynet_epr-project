@@ -8,7 +8,7 @@ export const AppDataSource = new DataSource({
     host: "localhost",
     port: 5432,
     username: "postgres",
-    password: "AbhilashDB",
+    password: process.env.DATABASE_KEY,
     database: "skynet_epr",
     synchronize: false,
     logging: false,
